@@ -1,0 +1,26 @@
+.footer{
+    margin: 10px auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid #797979;
+    padding: 15px 0;
+    background: black;
+    width: 100%;
+}
+.footer ul li{
+    list-style: none;
+    display: inline-block;
+    margin-right: 20px;
+    color: white;
+}
+.footer p{
+    color: white;
+
+}
+.contact img{
+    width: 20px;
+}
+h2{
+    color: white;
+}

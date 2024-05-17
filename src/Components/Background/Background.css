@@ -1,4 +1,4 @@
-.background{
+.background {
     width: 100%;
     min-height: 100vh;
     background: linear-gradient(rgba(8,0,58,0.6),rgba(8,0,58,0.6)),url('../../Images/background.jpg');
@@ -10,15 +10,17 @@
     align-items: center;
     justify-content: center;   
 }
-.background-text{
-    text-align: center;
+
+.background-text {
     max-width: 800px;
 }
-.background-text h1{
+
+.background-text h1 {
     font-size: 60px;
     font-weight: 600;
 }
-.background-text p{
+
+.background-text p {
     max-width: 700px;
     margin: 10px auto 20px;
     line-height: 1.4;

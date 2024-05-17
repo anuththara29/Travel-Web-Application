@@ -3,8 +3,8 @@ import './Background.css';
 
 function Background() {
   return (
-    <div className='background container'>
-      <div className='background-text'>
+    <div className='background d-flex align-items-center justify-content-center'>
+      <div className='background-text text-center'>
         <h1>Explore the World with Voyago</h1>
         <p>Discover wonders with us as you embark on unforgettable adventures to stunning destinations, 
         guided to extraordinary experiences that await your journey.</p>
@@ -13,4 +13,5 @@ function Background() {
   )
 }
 
-export default Background
+export default Background;
+

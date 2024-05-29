@@ -24,3 +24,18 @@
 .description p{
     margin-top:20px;
 }
+
+/*media query*/
+@media(max-width:800px){
+    .description{
+        flex-direction: column;
+    }
+    .description-left{
+        flex-basis: 100%;
+        margin: 20px;
+        order: 2; /*to get topic first*/ 
+    }
+    .description-right{
+        flex-basis: 100%;
+    }
+}

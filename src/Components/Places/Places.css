@@ -28,13 +28,26 @@
     flex-direction: column;
     color: #fff;
     cursor: pointer;
-    opacity: 0;
+    opacity: 0;  /*to hide the caption*/
     padding-top: 70%;
     transition:0.4s;
     font-size: 25px;
     font-weight: 600;
+    text-decoration: none;
 }
 .place:hover .caption{
-    opacity: 1;
+    opacity: 1; /*to display caption while hover*/
     padding-top: 0;
+}
+
+/*media query*/
+@media(max-width:650px){
+    .places{
+        flex-direction: column;
+    }
+    .place{
+        flex-basis: 100%;
+        margin: 20px;
+        width: 100%;
+    }
 }

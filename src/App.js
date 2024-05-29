@@ -1,25 +1,21 @@
 import React from 'react';
-import Navbar from './Components/Navbar/Navbar';
-import Background from './Components/Background/Background';
-import Places from './Components/Places/Places';
-import Title from './Components/Title/Title';
-import Description from './Components/Description/Description';
-import Feedback from './Components/Feedback/Feedback';
-import Footer from './Components/Footer/Footer';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Home from './Pages/Home';
+import About from './Pages/About';
+import Services from './Pages/Services';
+import Contact from './Pages/Contact';
 
 function App() {
   return (
     <div>
-      <Navbar/>
-      <Background/>
-      <div className='container'>
-        <Description/>
-        <Title title='Popular Destinations'/>
-        <Places/>
-        <Title title='Customer Testimonials'/>
-        <Feedback/>
-      </div>
-      <Footer/> 
+      <Router>
+        <Routes>
+          <Route path="/" element={<Home/>}/>,
+          <Route path="/about" element={<About/>}/>,
+          <Route path="/services" element={<Services/>}/>,
+          <Route path="/contact" element={<Contact/>}/>,
+        </Routes>
+      </Router>         
     </div>
   )
 }

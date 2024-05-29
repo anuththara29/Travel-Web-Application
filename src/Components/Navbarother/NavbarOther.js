@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import './Navbar.css';
+import './NavbarOther.css';
 import logo from '../../Images/logo.png';
 import { Link } from "react-router-dom";
 
-const Navbar = () => {
+const NavbarOther = () => {
   const [sticky, setSticky] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
 
@@ -24,7 +24,7 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className={`navbar navbar-expand-lg ${sticky ? 'sticky' : ''}`}>
+      <nav className={`navbar-other navbar-expand-lg ${sticky ? 'sticky' : ''}`}>
         <div className="container">
           <Link className="navbar-brand" to="/">
             <img src={logo} alt="Logo" className="logo" />
@@ -60,7 +60,7 @@ const Navbar = () => {
             <Link className="nav-link" to="/" >Home</Link>
           </li>
           <li className="nav-item">
-            <Link className="nav-link" to="/about">About Us</Link>
+            <Link className="nav-link" to="/about" >About Us</Link>
           </li>
           <li className="nav-item">
             <Link className="nav-link" to="/services" >Services</Link>
@@ -75,4 +75,4 @@ const Navbar = () => {
   );
 }
 
-export default Navbar;
+export default NavbarOther;

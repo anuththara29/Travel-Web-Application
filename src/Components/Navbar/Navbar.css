@@ -3,31 +3,28 @@
     padding: 4px 0;
     position: fixed;
     top: 0;
-    left: 0;
+    right: 0;
+    left: auto;
     z-index: 10;
-    transition: background-color 0.5s;
-}
-
-.logo {
+    background-color: transparent;
+    transition: background-color 0.5s, color 0.5s;
+  }
+  
+  .navbar.sticky {
+    background-color: #1560BD;
+  }
+  
+  .logo {
     width: 70px;
-}
-
-.nav-link {
+  }
+  
+  .nav-link {
     margin: 5px 20px;
     font-size: 16px;
-    color: #fff !important;
-}
-
-.dark-nav {
-    background: #1560BD;
-}
-
-.text-white {
-    color: #fff !important;
-}
-
-/* Custom button styles */
-.custom-btn {
+    color: #fff;
+  }
+  
+  .custom-btn {
     background: #FFF;
     color: #212121;
     padding: 10px 20px;
@@ -40,9 +37,157 @@
     align-items: center;
     justify-content: center;
     transition: background-color 0.3s;
-    margin: 5px 20px; /* Match the margin with other nav links */
-}
-
-.custom-btn:hover {
+    margin: 5px 20px;
+  }
+  
+  .custom-btn:hover {
     background: #f1f1f1;
-}
+  }
+  
+  .navbar-nav a {
+    text-decoration: none;
+  }
+  
+  .nav-link a,
+  .custom-btn a {
+    color: inherit;
+    text-decoration: none;
+  }
+  
+  .nav-link a:hover,
+  .custom-btn a:hover {
+    color: inherit;
+  }
+  
+  .navbar-toggler {
+    display: none;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 24px;
+    cursor: pointer;
+  }
+  
+  .icon-white {
+    color: #fff;
+  }
+  
+  .collapse {
+    display: flex;
+    flex-basis: auto;
+    flex-grow: 1;
+    align-items: center;
+  }
+  
+  @media (max-width: 1000px) {
+    .navbar .logo {
+      width: 50px;
+    }
+  
+    .navbar-toggler {
+      display: block;
+    }
+  
+    .navbar-collapse {
+      display: none;
+    }
+  
+    .navbar-nav .nav-item {
+      margin: 10px 15px;
+    }
+  }
+  
+  /* New styles for the side navigation */
+  .side-nav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 20;
+    top: 0;
+    left: 0;
+    background-color: #1560BD;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+  }
+  
+  .side-nav.open {
+    width: 250px;
+  }
+  
+  .side-nav .close-btn {
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    font-size: 36px;
+    color: #fff;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .side-nav .side-logo {
+    padding: 0 25px;
+  }
+  
+  .side-nav .navbar-nav {
+    padding-left: 25px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .side-nav .nav-item {
+    margin: 20px 0;
+  }
+  
+  .side-nav .nav-link {
+    font-size: 18px;
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  .side-nav .nav-link:hover {
+    color: #f1f1f1;
+  }
+  
+  .side-nav .custom-btn {
+    background: #FFF;
+    color: #212121;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 30px;
+    cursor: pointer;
+    border: 0;
+    outline: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s;
+  }
+  
+  .side-nav .custom-btn:hover {
+    background: #f1f1f1;
+  }
+  
+  .overlay {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,0.5);
+    overflow-x: hidden;
+    transition: 0.5s;
+  }
+  
+  .overlay.show {
+    width: 100%;
+  }
+  

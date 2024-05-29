@@ -1,50 +1,100 @@
-.feedback{
+.feedback {
     margin: 80px auto;
     padding: 0 80px;
     position: relative;
 }
-.foreward-btn, .backward-btn{
+.foreward-btn, .backward-btn {
     position: absolute;
     top: 50%;
-    right: 0;
     transform: translateY(-50%);
     cursor: pointer;
     width: 40px;
-}
-.backward-btn{
-    right: auto;
-    left: 0;
-}
-.slider{
-   overflow: hidden;/*to get only 2 images*/
-}
-.slider ul{
     display: flex;
-    width: 200%;     /*because of 200% only get 2 images*/
-    overflow-x: hidden;
-    transition: 0.5s;
+    justify-content: center;
+    align-items: center;
+    z-index: 1; /* Ensure the buttons are above the slides */
 }
-.slider ul li{
+.foreward-btn {
+    right: 10px; 
+}
+.backward-btn {
+    left: 10px; 
+}
+.slider {
+    overflow: hidden; /* to get only 2 images */
+}
+.slider ul {
+    display: flex;
+    width: 200%; /* because of 200% only get 2 images */
+    transition: 0.5s;
+    padding: 0; 
+    margin: 0; 
+}
+.slider ul li {
     list-style: none;
     padding: 20px;
-    width:50%;
+    width: 50%;
+    box-sizing: border-box;
+    display: flex;
+    flex-grow: 1;
 }
-.slide{
+.slide {
     box-shadow: 0 0 20px rgba(0,0,0,0.05);
     padding: 40px;
     border-radius: 10px;
     color: #676767;
     line-height: 1.4;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%; /* Ensure all slides are the same height */
 }
-.slide img{
+.slide img {
     width: 65px;
     border-radius: 50%;
     margin-right: 10px;
 }
-.user-info{
+.user-info {
     display: flex;
     align-items: center;
     margin-bottom: 20px;
     font-size: 15px;
     color: black;
+}
+
+/* Media query */
+@media(max-width: 800px) {
+    .feedback {
+        padding: 0 40px;
+    }
+    .foreward-btn, .backward-btn {
+        padding: 10px;
+        width: 35px;
+    }
+    .slider ul li {
+        padding: 10px;
+    }
+    .slide {
+        padding: 20px;
+    }
+    .slide img {
+        width: 50px;
+    }
+}
+
+@media(max-width: 600px) {
+    .user-info {
+        display: block;
+        margin-bottom: 10px;
+        font-size: 12px;
+    }
+    .user-info h3 {
+        font-size: 16px;
+    }
+    .slider p {
+        font-size: 12px;
+    }
+    .slide {
+        padding: 15px;
+    }
 }

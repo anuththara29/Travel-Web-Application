@@ -1,7 +1,5 @@
 import React, {useRef} from 'react';
 import './Feedback.css';
-import next from '../../Images/forward-btn.png';
-import back from '../../Images/backward-btn.png';
 import profile1 from '../../Images/profile1.jpg';
 import profile2 from '../../Images/profile2.jpg';
 import profile3 from '../../Images/profile3.jpg';
@@ -25,8 +23,8 @@ function Feedback() {
   }
   return (
     <div className='feedback'>
-      <img src={back} alt='' className='backward-btn' onClick={slideBackward}/>
-      <img src={next} alt='' className='foreward-btn' onClick={slideForward}/>
+      <div className='backward-btn' onClick={slideBackward}><i class="fa-solid fa-arrow-left"></i></div>
+      <div className='foreward-btn' onClick={slideForward}><i class="fa-solid fa-arrow-right"></i></div>
       <div className='slider'>
         <ul ref={slider}>
             <li>

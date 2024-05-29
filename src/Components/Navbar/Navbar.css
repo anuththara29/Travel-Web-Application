@@ -97,7 +97,6 @@
     }
   }
   
-  /* New styles for the side navigation */
   .side-nav {
     height: 100%;
     width: 0;
@@ -115,7 +114,7 @@
   }
   
   .side-nav.open {
-    width: 250px;
+    width: 240px;
   }
   
   .side-nav .close-btn {

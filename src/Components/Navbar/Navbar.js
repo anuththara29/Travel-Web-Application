@@ -66,7 +66,7 @@ const Navbar = () => {
             <Link className="nav-link" to="/services" >Services</Link>
           </li>
           <li className="nav-item">
-            <Link className="nav-link custom-btn" to="/contact" >Contact Us</Link>
+            <Link className="nav-link custom-btn" to="/contact" onClick={toggleNavbar}>Contact Us</Link>
           </li>
         </ul>
       </div>

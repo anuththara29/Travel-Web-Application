@@ -24,7 +24,7 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className={`navbar navbar-expand-lg ${sticky ? 'sticky' : ''}`}>
+      <nav className={`navbar fixed-top navbar-expand-lg ${sticky ? 'sticky' : ''} `}>
         <div className="container">
           <Link className="navbar-brand" to="/">
             <img src={logo} alt="Logo" className="logo" />
@@ -32,7 +32,7 @@ const Navbar = () => {
           <button className="navbar-toggler" type="button" onClick={toggleNavbar}>
             <i className="fas fa-bars icon-white"></i>
           </button>
-          <div className="collapse navbar-collapse justify-content-end">
+          <div className='collapse navbar-collapse justify-content-end' >
             <ul className="navbar-nav align-items-center">
               <li className="nav-item">
                 <Link className="nav-link text-white" to="/">Home</Link>
@@ -52,21 +52,18 @@ const Navbar = () => {
       </nav>
       <div className={`side-nav ${isOpen ? 'open' : ''}`}>
         <button className="close-btn" onClick={toggleNavbar}>&times;</button>
-        <Link className="navbar-brand side-logo" to="/">
-          <img src={logo} alt="Logo" className="logo" />
-        </Link>
         <ul className="navbar-nav">
           <li className="nav-item">
             <Link className="nav-link" to="/" >Home</Link>
           </li>
           <li className="nav-item">
-            <Link className="nav-link" to="/about">About Us</Link>
+            <Link className="nav-link" to="/about" >About Us</Link>
           </li>
           <li className="nav-item">
             <Link className="nav-link" to="/services" >Services</Link>
           </li>
           <li className="nav-item">
-            <Link className="nav-link custom-btn" to="/contact" onClick={toggleNavbar}>Contact Us</Link>
+            <Link className="nav-link custom-btn" to="/contact" >Contact Us</Link>
           </li>
         </ul>
       </div>

@@ -5,11 +5,14 @@
   top: 0;
   left: 0;
   z-index: 10;
+  background-color: transparent;
+  transition: background-color 0.5s, color 0.5s;
 }
 
 .navbar.sticky {
   background-color: #1560BD; /* Change background when sticky */
 }
+
 .logo {
   width: 70px;
 }
@@ -17,6 +20,7 @@
 .nav-link {
   margin: 5px 20px;
   font-size: 16px; 
+  color: #fff; /* Ensuring the nav link is white */
 }
 
 .custom-btn {
@@ -45,13 +49,13 @@
 
 .nav-link a,
 .custom-btn a {
-  color: blue;
+  color: inherit;
   text-decoration: none;
 }
 
 .nav-link a:hover,
 .custom-btn a:hover {
-  color: blue;
+  color: inherit;
 }
 
 .menu-icon {
@@ -62,78 +66,78 @@
 
 @media (max-width: 1000px) {
   .navbar .logo {
-      width: 50px;
+    width: 50px;
   }
 
   .navbar-nav .nav-item {
-      margin: 10px 15px;
+    margin: 10px 15px;
   }
 }
 
 @media (max-width: 768px) {
   .navbar {
-      padding: 10px 0;
+    padding: 10px 0;
   }
 
   .navbar-toggler {
-      background: none;
-      border: none;
-      color: #fff;
-      font-size: 24px;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 24px;
   }
 
   .navbar-nav {
-      display: none; 
+    display: none; 
   }
 
   .navbar.open .navbar-nav {
-      display: flex; 
+    display: flex; 
   }
 
   .side-nav {
-      position: fixed;
-      top: 0;
-      right: -200px;
-      width: 250px;
-      height: 100%;
-      background: #212EA0;
-      z-index: 11;
-      transition: 0.3s;
-      display: flex;
-      flex-direction: column;
-      padding-top: 70px;
+    position: fixed;
+    top: 0;
+    right: -200px;
+    width: 250px;
+    height: 100%;
+    background: #212EA0;
+    z-index: 11;
+    transition: 0.3s;
+    display: flex;
+    flex-direction: column;
+    padding-top: 70px;
   }
 
   .side-nav.open {
-      right: 0;
+    right: 0;
   }
 
   .side-nav .nav-item {
-      margin-right: 5px;
+    margin-right: 5px;
   }
 
   .overlay {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0, 0, 0, 0.5);
-      z-index: 10;
-      display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 10;
+    display: none;
   }
 
   .overlay.show {
-      display: block;
+    display: block;
   }
 
   .close-btn {
-      background: none;
-      border: none;
-      color: #fff;
-      font-size: 24px;
-      position: absolute;
-      top: 20px;
-      right: 20px;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 24px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
   }
 }

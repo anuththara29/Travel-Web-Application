@@ -32,7 +32,7 @@ const Navbar = () => {
           <button className="navbar-toggler" type="button" onClick={toggleNavbar}>
             <i className="fas fa-bars icon-white"></i>
           </button>
-          <div className='collapse navbar-collapse justify-content-end' >
+          <div className='collapse navbar-collapse justify-content-end'>
             <ul className="navbar-nav align-items-center">
               <li className="nav-item">
                 <Link className="nav-link text-white" to="/">Home</Link>
@@ -44,7 +44,7 @@ const Navbar = () => {
                 <Link className="nav-link text-white" to="/services">Services</Link>
               </li>
               <li className="nav-item">
-                <Link className="btn custom-btn" to="/contact">Contact Us</Link>
+                <Link className="nav-link text-white" to="/contact">Contact Us</Link>
               </li>
             </ul>
           </div>
@@ -63,7 +63,7 @@ const Navbar = () => {
             <Link className="nav-link" to="/services" >Services</Link>
           </li>
           <li className="nav-item">
-            <Link className="nav-link custom-btn" to="/contact" >Contact Us</Link>
+            <Link className="nav-link" to="/contact">Contact Us</Link>
           </li>
         </ul>
       </div>

@@ -1,8 +1,15 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './Footer.css';
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 function Footer() {
+  const location = useLocation();
+
+  useEffect(() => {
+    // Scroll to top when the path changes
+    window.scrollTo(0, 0);
+  }, [location]);
+
   return (
     <div className='footer'>
       <div className='container'>
@@ -62,4 +69,3 @@ function Footer() {
 }
 
 export default Footer;
-
